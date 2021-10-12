@@ -1,0 +1,109 @@
+﻿District,Location,Station,Month,Precipitation
+Central,Melbourne,86338,1,1.694354839
+Central,Melbourne,86338,2,0.951327434
+Central,Melbourne,86338,3,1.079032258
+Central,Melbourne,86338,4,1.9825
+Central,Melbourne,86338,5,1.635483871
+Central,Melbourne,86338,6,1.325373134
+Central,Melbourne,86338,7,1.310469314
+Central,Melbourne,86338,8,1.592114695
+Central,Melbourne,86338,9,1.592592593
+Central,Melbourne,86338,10,1.418604651
+Central,Melbourne,86338,11,1.8025
+Central,Melbourne,86338,12,1.795967742
+Mallee,Mallee,76064,1,0.858215962
+Mallee,Mallee,76064,2,0.528497409
+Mallee,Mallee,76064,3,0.288038278
+Mallee,Mallee,76064,4,0.851428571
+Mallee,Mallee,76064,5,0.750967742
+Mallee,Mallee,76064,6,0.77852349
+Mallee,Mallee,76064,7,0.714893617
+Mallee,Mallee,76064,8,1.10521327
+Mallee,Mallee,76064,9,1.087437186
+Mallee,Mallee,76064,10,0.865641026
+Mallee,Mallee,76064,11,0.762068966
+Mallee,Mallee,76064,12,0.62513089
+Wimmera,Horsham,79082,1,1.236580087
+Wimmera,Horsham,79082,2,0.661696658
+Wimmera,Horsham,79082,3,0.523903509
+Wimmera,Horsham,79082,4,0.870644391
+Wimmera,Horsham,79082,5,1.425761124
+Wimmera,Horsham,79082,6,1.44028777
+Wimmera,Horsham,79082,7,1.770833333
+Wimmera,Horsham,79082,8,1.411057692
+Wimmera,Horsham,79082,9,1.286013986
+Wimmera,Horsham,79082,10,0.938012959
+Wimmera,Horsham,79082,11,1.062557078
+Wimmera,Horsham,79082,12,1.199777283
+South West,Yatchaw,90088,1,1.299388379
+South West,Yatchaw,90088,2,0.828571429
+South West,Yatchaw,90088,3,1.175665399
+South West,Yatchaw,90088,4,1.498367347
+South West,Yatchaw,90088,5,3.58358209
+South West,Yatchaw,90088,6,3.37283237
+South West,Yatchaw,90088,7,3.955172414
+South West,Yatchaw,90088,8,3.770995671
+South West,Yatchaw,90088,9,3.53368984
+South West,Yatchaw,90088,10,2.512851406
+South West,Yatchaw,90088,11,1.909128631
+South West,Yatchaw,90088,12,1.384120172
+Northern Country,Kyabram,80091,1,1.519585253
+Northern Country,Kyabram,80091,2,1.061111111
+Northern Country,Kyabram,80091,3,1.455555556
+Northern Country,Kyabram,80091,4,1.330787589
+Northern Country,Kyabram,80091,5,1.230805687
+Northern Country,Kyabram,80091,6,1.345169082
+Northern Country,Kyabram,80091,7,1.336666667
+Northern Country,Kyabram,80091,8,1.254503464
+Northern Country,Kyabram,80091,9,1.012529002
+Northern Country,Kyabram,80091,10,0.77452381
+Northern Country,Kyabram,80091,11,1.349100257
+Northern Country,Kyabram,80091,12,1.318881119
+North Central,High Camp,88121,1,1.379651525
+North Central,High Camp,88121,2,1.228717599
+North Central,High Camp,88121,3,1.134225264
+North Central,High Camp,88121,4,1.422829582
+North Central,High Camp,88121,5,1.744702194
+North Central,High Camp,88121,6,2.002857143
+North Central,High Camp,88121,7,2.017065684
+North Central,High Camp,88121,8,2.099006828
+North Central,High Camp,88121,9,2.037048765
+North Central,High Camp,88121,10,1.701494396
+North Central,High Camp,88121,11,1.762982005
+North Central,High Camp,88121,12,1.36971393
+North East,Uplands,82018,1,2.067606136
+North East,Uplands,82018,2,1.893674346
+North East,Uplands,82018,3,2.045632102
+North East,Uplands,82018,4,2.110710301
+North East,Uplands,82018,5,3.106947444
+North East,Uplands,82018,6,3.685304118
+North East,Uplands,82018,7,4.141338583
+North East,Uplands,82018,8,4.258835979
+North East,Uplands,82018,9,3.884314442
+North East,Uplands,82018,10,3.432363378
+North East,Uplands,82018,11,2.82707568
+North East,Uplands,82018,12,2.495928396
+West and South Gippsland,Traralgon,85009,1,1.299227202
+West and South Gippsland,Traralgon,85009,2,1.576165803
+West and South Gippsland,Traralgon,85009,3,1.358204334
+West and South Gippsland,Traralgon,85009,4,1.685806452
+West and South Gippsland,Traralgon,85009,5,1.484
+West and South Gippsland,Traralgon,85009,6,1.817105263
+West and South Gippsland,Traralgon,85009,7,1.72764613
+West and South Gippsland,Traralgon,85009,8,2.071518987
+West and South Gippsland,Traralgon,85009,9,1.969645868
+West and South Gippsland,Traralgon,85009,10,1.870873786
+West and South Gippsland,Traralgon,85009,11,2.005666667
+West and South Gippsland,Traralgon,85009,12,1.761111111
+East Gippsland,Gelantipy,84142,1,2.095662949
+East Gippsland,Gelantipy,84142,2,2.507356948
+East Gippsland,Gelantipy,84142,3,2.120100503
+East Gippsland,Gelantipy,84142,4,1.917902813
+East Gippsland,Gelantipy,84142,5,1.589122373
+East Gippsland,Gelantipy,84142,6,2.576130653
+East Gippsland,Gelantipy,84142,7,1.9272509
+East Gippsland,Gelantipy,84142,8,1.83497006
+East Gippsland,Gelantipy,84142,9,2.014567901
+East Gippsland,Gelantipy,84142,10,2.389913899
+East Gippsland,Gelantipy,84142,11,3.213003901
+East Gippsland,Gelantipy,84142,12,2.2680798
