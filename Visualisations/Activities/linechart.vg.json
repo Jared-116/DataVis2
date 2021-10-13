@@ -1,0 +1,38 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": "container",
+    "height": 250,
+    "title": "Number of Tourists Across Activities",
+    "params": [
+        {
+            "name": "tourist_type",
+            "value": "Domestic night total",
+            "bind": {
+                "input": "select",
+                "options": [
+                    "Domestic day total",
+                    "Domestic night total",
+                    "International total"
+                ],
+                "labels": [
+                    "Domestic Daytrips",
+                    "Domestic Overnight",
+                    "International Tourists"
+                ],
+                "name": "Tourist Type: "
+            }
+        }
+    ],
+    "data": {"url": "https://raw.githubusercontent.com/Jared-116/DataVis2/main/data/outdoorActivity.csv" },
+    "transform": [
+        {"calculate" : "datum[tourist_type]", "as": "visitors"}
+    ],
+    "mark": {
+        "type": "line"
+    },
+    "encoding": {
+        "x": {"field": "Year"},
+        "y": {"field": "visitors", "type": "quantitative", "title": "Visitors"},
+        "color": {"field": "Activity"}
+    }
+}

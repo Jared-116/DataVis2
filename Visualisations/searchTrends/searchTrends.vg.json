@@ -1,0 +1,79 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": "container",
+    "height": 250,
+    "title": "Number of Tourists Across Activities",
+    "data": {"url": "https://raw.githubusercontent.com/Jared-116/DataVis2/main/data/searchTrends.csv"},
+    "layer": [
+        {
+            "data": {
+                "values": [
+                    {
+                        "start": "16/12/18",
+                        "end": "10/3/19",
+                        "event": "Initial Lockdown"
+                    },
+                    {
+                        "start": "19/5/19",
+                        "end": "11/8/19",
+                        "event": "Second Lockdown"
+                    }
+                ]
+            },
+            "mark": {
+                "type": "rect",
+                "color": "red"
+            },
+            "encoding": {
+                "x": {
+                    "field": "start",
+                    "type": "temporal"
+                },
+                "x2": {
+                    "field": "end",
+                    "type": "temporal"
+                },
+                "color": {"field": "event", "type": "nominal"}
+            }
+        },
+        {
+            "mark": {
+                "type": "line"
+            },
+            "encoding": {
+                "x": {"field": "Week", "type": "temporal"},
+                "y": {"field": "frequency", "type": "quantitative", "title": "Visitors"},
+                "color": {"field": "searchTerm"},
+                "tooltip": [
+                    {"field": "Week", "timeUnit": "yearmonthdate"},
+                    {"field" :"frequency"},
+                    {"field": "searchTerm"}
+                ]
+            }
+        },
+        {
+        "mark": {
+            "type": "line"
+        },
+        "encoding": {
+            "x": {"field": "Week", "type": "temporal"},
+            "y": {"field": "frequency", "type": "quantitative", "title": "Visitors"},
+            "color": {"field": "searchTerm", "legend": null},
+            "tooltip": [
+                {"field": "Week", "timeUnit": "yearmonthdate"},
+                {"field" :"frequency"},
+                {"field": "searchTerm"}
+            ]
+        },
+        "transform": [{"filter": {"timeUnit": "yearmonthdate", "field": "Week", "range": [{"year": 2019, "month": "may", "date": 30},{"year": 2019, "month": "jun", "date": 2}]}}],
+            "layer": [
+                {
+                "mark": {"type": "circle"}
+                },
+                {
+                "mark": {"type": "text", "align": "left", "dx": 4},
+                "encoding": {"text": {"field":"searchTerm", "type": "nominal"}}
+              }]
+                }
+    ]
+}

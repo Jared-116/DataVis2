@@ -1,0 +1,53 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": "container",
+    "height": 400,
+    "title": "Precipitation in Victoria",
+    "projection": {"type": "mercator", "center" : [145, -36.55], "scale" : 2200},
+    "layer": [
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/Jared-116/DataVis2/main/data/regionWeather.csv"
+        },
+        "transform": [
+          {
+            "lookup": "District",
+            "from": {
+              "data": {
+                "url": "https://raw.githubusercontent.com/Jared-116/DataVis2/main/data/reprojection.json",
+                "format": {"type": "topojson", "feature": "reprojection"}
+              },
+              "key": "properties.TFB_DIST"
+            },
+            "as": "geo"
+          }
+        ],
+        "layer": [
+            {
+            "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
+            },
+            {
+              "mark": {"type": "geoshape"},
+              "encoding": {
+                  "shape": {
+                    "field": "geo",
+                    "type": "geojson"
+                  },
+                  "color": {
+                    "field": "Difference",
+                    "type": "quantitative",
+                    "title": "Difference (mm) from Average",
+                    "scale": {"domainMid": 0},
+                    "legend": {"orient": "none", "legendX":10, "legendY":10}
+                  },
+                  "tooltip": [
+                      {"field": "District", "title": "Region"},
+                      {"field": "Difference (mm)", "type": "quantitative", "title": "Difference", "format": ".2f"},
+                      {"field": "Average (mm)", "format": ".2f"}
+                  ]
+              }
+          }
+        ]
+        }
+    ]
+  }
