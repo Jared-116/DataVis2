@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": "container",
-    "height": 250,
+    "height": 220,
     "title": "Number of Tourists Across Activities",
     "params": [
         {
@@ -23,7 +23,7 @@
             }
         }
     ],
-    "data": {"url": "https://raw.githubusercontent.com/Jared-116/DataVis2/main/data/outdoorActivity.csv" },
+    "data": {"url": "https://raw.githubusercontent.com/Jared-116/DataVis2/main/data/reducedActivity.csv" },
     "transform": [
         {"calculate" : "datum[tourist_type]", "as": "visitors"}
     ],
@@ -32,7 +32,7 @@
     },
     "encoding": {
         "x": {"field": "Year"},
-        "y": {"field": "visitors", "type": "quantitative", "title": "Visitors"},
-        "color": {"field": "Activity"}
+        "y": {"field": "visitors", "type": "quantitative", "title": "Visitors", "axis": {"format": "~s"}},
+        "color": {"field": "Activity", "scale": {"range": ["#E69F00", "#56B4E9", "#009E73", "#0072B2", "#D55E00", "#CC79A7", "#000000"]}}
     }
 }

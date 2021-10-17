@@ -6,4 +6,19 @@ h2 {
   }
 body {
 	font-family: 'Roboto', sans-serif;
+  background-color:rgb(255, 212, 131)
   }
+header {
+  padding-top: 150px;
+  padding-bottom: 100px;
+  background-size: cover;
+}
+.backing {
+  padding: 10px;
+  width: 400px;
+  margin: 0 auto;
+  background: rgb(238, 238, 238, 0.7);
+}
+.main {
+  background-color:rgb(255, 255, 255)
+}

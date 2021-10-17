@@ -1,0 +1,61 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 500,
+  "title": "Recreation Sites in Victoria",
+  "params": [
+    {
+      "name": "trip_type",
+      "value": "OVERNIGHT",
+        "bind":{
+          "input": "select",
+          "options": [
+            "DAY_ACTIVITIES",
+            "OVERNIGHT"
+          ],
+          "labels": [
+            "Daytrip",
+            "Overnight"
+          ],
+          "name": "Trip Type: "
+    }}
+    ],
+  "projection": {"type": "mercator", "center" : [145.5, -36.55], "scale" : 4900},
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/Jared-116/wk9homework/main/js/Vic_State.json",
+        "format": {"type": "topojson", "feature": "Vic_State"}
+      },
+      "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "lightgray"}
+      },
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/Jared-116/DataVis2/main/data/reprojection.json",
+          "format": {"type": "topojson", "feature": "reprojection"}
+        },
+        "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
+        },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/Jared-116/DataVis2/main/data/rec_sites_processed.csv"
+      },
+      "transform" : [
+        {"calculate": "{'Y': 'Allowed', '': 'Not Allowed'}[datum.CAMPING]", "as": "CAMPING"},
+        {"calculate": "datum[trip_type]", "as": "facilities"}
+      ],
+      "mark": {"type": "circle"},
+      "encoding": {
+        "longitude": {"field": "LONGITUDE", "type": "quantitative"},
+        "latitude": {"field": "LATITUDE", "type": "quantitative"},
+        "color" : {"field": "facilities", "type" : "nominal", "legend": {
+          "title": "Facilities", "orient": "top-right",  "fillColor": "rgb(255,255,255,0.4)", "padding": 10},
+          "scale": {"range": ["#E69F00", "#56B4E9", "#009E73", "#FDF58E", "#0072B2", "#D55E00", "#CC79A7", "#000000"]}},
+        "tooltip" : [
+          {"field" : "NAME", "type" : "nominal", "title": "Name"},
+          {"field" : "facilities", "type" : "nominal", "title": "Facilities"}
+        ]
+      }
+    }
+  ]
+}

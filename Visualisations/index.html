@@ -15,22 +15,24 @@
 </head>
 <body>
     
-    <header><h1 style="text-align:center">Camp in Victoria!</h1><p style="text-align:center">Recover from the pandemic in the great outdoors</p></header>
-    <div class="main", style="width:900px;margin:0 auto">
+    <div class="main", style="width:1000px;margin:0 auto">
         <table>
+            <tr><th><header style="background-image:url('CROPscott-goodwill.jpg')"><div class="backing"><h1 style="text-align:center">Camp in Victoria!</h1><p style="text-align:center">Recover from the pandemic in the great outdoors</p></div></header></th></tr>
         <div class="wrap">
             <tr><th><div class="section">
-                <h2>COVID19 and Camping</h2>
-                <p>Lorem Ipsum</p>
+                <h2>COVID19 and the Outdoors</h2>
+                <p style="padding-left:20%;padding-right:20%">The outdoors has always been a big part of how people enjoy Australia, whether it be locals or tourists. In the line graph immediately below showing the number of people visiting tourist activities, we can see that our main tourist attractions are the outdoors, and before the pandemic they were seeing more and more visitors each year. The graph on the left shows the number of domestic holidays in a region by capita. Using the filters at the bottom, you can see how the pandemic has affected domestic travel.</p>
+                <p style="padding-left:20%;padding-right:20%;padding-bottom:25px">Unfortunately, recent lockdowns and travel restrictions have impacted our interest in camping. We can see from the line graph below that restrictions led to an increase in indoor entertainment, to the neglect of time in the great outdoors.</p>
                 <div class="charts">
                     <div id="choropleth_map", style="display:block;width:50%;float:left"></div>
                     <div id="activities", style="display:block;width:50%;float:right"></div>
-                    <div id="searchTrends", style ="display:block;width:50%;float:right"></div>
+                    <div id="searchTrends", style ="display:block;width:50%;float:right;padding-top:50px"></div>
                 </div>
             </div></th></tr>
             <tr><th><div class="section">
                 <h2>Weather</h2>
-                <p>Loreum Ipsum</p>
+                <p style="padding-left:20%;padding-right:20%">So, now that restrictions are finally easing why not spend sometime outdoors with friends?</p>
+                <p style="padding-left:20%;padding-right:20%;padding-bottom:25px">The first step to planning a trip is to decide your location. There’s a diverse range of places in our lucky state of Victoria, with unique weather too. The graphs below show the rainfall in areas across the state. Enjoy the rain? Head out to North East Victoria in August. Otherwise, if you’re looking to escape the wet, Mallee in the North West of Victoria is the place to be!</p>
                 <div class="charts">
                     <div id="weathermap", style="display:block;width:50%;float:left"></div>
                     <div id="heatmap", style="display:block;width:50%;float:right"></div>
@@ -38,11 +40,12 @@
             </div></th></tr>
             <tr><th><div class="section">
                 <h2>Camping</h2>
-                <p>Loreum Ipsum</p>
+                <p style="padding-left:20%;padding-right:20%;padding-bottom:25px">Now you know where you’re going, use the map below to find a spot in the ideal location with the facilities you need! Not a fan of camping? That’s perfectly fine! Use the filter below to find the perfect place to spend the day or night!</p>
                 <div class="charts">
                     <div id="symbol_map", style="display:block;width:100%"></div>
                 </div>
             </div></th></tr>
+            <tr><th><p style="font-size:x-small">© Jared Turnley 2021 | This work is licensed under a CC BY 4.0 license.</p></th></tr>
         </div>
         </table>
     </div>
@@ -63,17 +66,17 @@
         // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 
-    var spec2 = "rainfallChart/heatmap.vg.json";
-    vegaEmbed('#heatmap', spec2).then(function(result) {
-        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-    }).catch(console.error);
-
     var spec2 = "rainfallMap/weathermap.vg.json";
     vegaEmbed('#weathermap', spec2).then(function(result) {
         // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 
-    var spec2 = "Campsites/symbol_map.vg.json";
+    var spec2 = "rainfallChart/heatmap.vg.json";
+    vegaEmbed('#heatmap', spec2).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    var spec2 = "Campsites/symbol_map_improved.vg.json";
     vegaEmbed('#symbol_map', spec2).then(function(result) {
         // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);

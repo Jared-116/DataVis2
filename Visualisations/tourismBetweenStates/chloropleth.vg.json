@@ -76,23 +76,7 @@
                         {"field": "trips", "title": "Trips/1000 People", "format": ".2f"}
                     ]
                 }
-            },
-            {
-              "layer": [
-                {
-                  "transform": [
-                    {"filter": {
-                      "field": "Region", "equal": "Australian Capital Territory"
-                    }},
-                    {"calculate": "'The ACT has the most overnight trips per capita.'", "as": "annotation"}
-                  ],
-                  "mark": {"type": "text", "align": "center", "dx": 130, "dy": 80, "color": "grey"},
-                  "encoding": {
-                    "text": {"field": "annotation"}
-                }
-                }
-              ]
-              }
+            }
         ]
         }
     ]

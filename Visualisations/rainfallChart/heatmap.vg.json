@@ -1,13 +1,17 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": "container",
-    "height": 300,
-    "title": "Daily Precipitation Across the Year in Regions of Victoria",
-    "data": {"url": "https://raw.githubusercontent.com/Jared-116/DataVis2/main/data/Weather.csv" },
+    "height": 400,
+    "title": "Average Daily Precipitation in Regions of Victoria",
+    "data": {"url": "https://raw.githubusercontent.com/Jared-116/DataVis2/main/data/Weather.csv"},
     "mark": "rect",
     "encoding": {
-        "x": {"field": "Month", "timeUnit": "month", "type": "ordinal"},
+        "x": {"field": "Month", "timeUnit": "month", "type": "ordinal", "title": "Month"},
         "y": {"field": "District", "type": "nominal"},
-        "color": {"field": "Precipitation", "type": "quantitative", "title": "Daily Precipitation (mm)"}
+        "color": {"field": "Precipitation", "type": "quantitative", "title": "(mm)"},
+        "tooltip": [
+            {"field": "Month", "timeUnit": "month", "title": "Month"},
+            {"field": "District"},
+            {"field": "Precipitation", "title": "Precipitation (mm)"}]
     }
 }
